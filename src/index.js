@@ -37,7 +37,6 @@ const renderFilms = (films) => {
 
         const btn = document.createElement("button");
         btn.textContent = "Buy ticket";
-        // Add an event listener to the button to decrement the number of tickets when clicked
         btn.addEventListener('click', () => {
         // Check if the number of available tickets is 0
           if (parseInt(tickets.innerText.split('')[1]) === 0) {
@@ -45,13 +44,8 @@ const renderFilms = (films) => {
            alert("Ticket Sold Out");
           } else {
           // Otherwise, decrement the number of available tickets by 1
-          tickets.innerText = `Available tickets: ${parseInt(tickets.innerText.split(': ')[1]) - 1}`;
+          ticketNum.textContent = `Available tickets: ${parseInt(tickets.innerText.split('')[1]) - 1}`;
           }
         });
-        // Append the button to the filmCard
-      
-    
     })
-    
-    
 };
