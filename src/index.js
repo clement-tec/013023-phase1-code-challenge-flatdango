@@ -39,12 +39,12 @@ const renderFilms = (films) => {
         btn.textContent = "Buy ticket";
         btn.addEventListener('click', () => {
         // Check if the number of available tickets is 0
-          if (parseInt(tickets.innerText.split('')[1]) === 0) {
+          if (parseInt(ticketNum.innerText.split('')) === 0) {
          // If it is, show an alert
            alert("Ticket Sold Out");
           } else {
           // Otherwise, decrement the number of available tickets by 1
-          ticketNum.textContent = `Available tickets: ${parseInt(tickets.innerText.split('')[1]) - 1}`;
+          ticketNum.textContent = `Available tickets: ${parseInt(ticketNum.innerText.split('')) - 1}`;
           }
         });
     })
